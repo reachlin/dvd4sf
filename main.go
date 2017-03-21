@@ -9,6 +9,6 @@ import (
 func main() {
   d := NewDriver("root")
   h := volume.NewHandler(d)
-  h.ServeUnix("root", "test_volume")
+  h.ServeUnix("root", "/run/docker/plugins/dvd4sf.sock")
 	fmt.Println("works")
 }

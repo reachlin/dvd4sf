@@ -8,8 +8,8 @@ type dvd4sfDriver struct {
   root    string
 }
 
-func NewDriver(root string) dvd4sfDriver {
-  return dvd4sfDriver {root: root}
+func NewDriver(root string) *dvd4sfDriver {
+  return &dvd4sfDriver {root: root}
 }
 
 func (d *dvd4sfDriver) Create(req volume.Request) volume.Response {
