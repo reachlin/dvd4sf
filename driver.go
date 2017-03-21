@@ -1,4 +1,4 @@
-package dvd4sf
+package main
 
 import (
   "github.com/docker/go-plugins-helpers/volume"
