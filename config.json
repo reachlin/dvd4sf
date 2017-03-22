@@ -1,0 +1,36 @@
+{
+    "description": "Docker Volume Driver For Secret Files",
+    "documentation": "",
+    "entrypoint": [
+        "/dvd4sf"
+    ],
+    "env": [
+        {
+            "name": "DEBUG",
+            "settable": [
+                "value"
+            ],
+            "value": "0"
+        }
+    ],
+    "interface": {
+        "socket": "dvd4sf.sock",
+        "types": [
+            "docker.volumedriver/1.0"
+        ]
+    },
+    "mounts": [
+        {
+            "destination": "/mnt/state",
+            "options": [
+                "rbind"
+            ],
+            "source": "/var/lib/docker/plugins/",
+            "type": "bind"
+        }
+    ],
+    "network": {
+        "type": "host"
+    },
+    "propagatedmount": "/mnt/volumes"
+}
