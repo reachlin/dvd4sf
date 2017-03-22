@@ -2,3 +2,7 @@ language: go
 
 services:
   - docker
+
+script:
+  - make rootfs
+  - ls -al plugin|grep config.json
