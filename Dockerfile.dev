@@ -5,7 +5,7 @@ WORKDIR /go/src/github.com/reachlin/dvd4sf
 
 RUN set -ex \
     && apk add --no-cache --virtual .build-deps \
-    gcc libc-dev \
+    gcc libc-dev git \
     && go get ./... \
     && go install --ldflags '-extldflags "-static"' \
     && apk del .build-deps
